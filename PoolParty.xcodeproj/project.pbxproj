@@ -15,6 +15,10 @@
 		7EA3835022A8AF4900C8CDD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA3834F22A8AF4900C8CDD6 /* Assets.xcassets */; };
 		7EA3835322A8AF4900C8CDD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA3835122A8AF4900C8CDD6 /* LaunchScreen.storyboard */; };
 		7EA3835B22A8B7DC00C8CDD6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA3835A22A8B7DC00C8CDD6 /* SignUpViewController.swift */; };
+		7EA3835F22A8DEA100C8CDD6 /* MapTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA3835E22A8DEA100C8CDD6 /* MapTasks.swift */; };
+		7EA3836122A8E7FE00C8CDD6 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA3836022A8E7FE00C8CDD6 /* EditInfoViewController.swift */; };
+		7EA3836322A8EC2E00C8CDD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EA3836222A8EC2E00C8CDD6 /* GoogleService-Info.plist */; };
+		7EA3836522A8F0C600C8CDD6 /* RideRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA3836422A8F0C600C8CDD6 /* RideRequestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		7EA3835222A8AF4900C8CDD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EA3835422A8AF4900C8CDD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EA3835A22A8B7DC00C8CDD6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7EA3835E22A8DEA100C8CDD6 /* MapTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTasks.swift; sourceTree = "<group>"; };
+		7EA3836022A8E7FE00C8CDD6 /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
+		7EA3836222A8EC2E00C8CDD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7EA3836422A8F0C600C8CDD6 /* RideRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestViewController.swift; sourceTree = "<group>"; };
 		CA1B026CB2F6F79EE302F274 /* Pods-PoolParty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoolParty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoolParty/Pods-PoolParty.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +82,7 @@
 		7EA3834522A8AF4700C8CDD6 /* PoolParty */ = {
 			isa = PBXGroup;
 			children = (
+				7EA3836222A8EC2E00C8CDD6 /* GoogleService-Info.plist */,
 				7EA3834622A8AF4700C8CDD6 /* AppDelegate.swift */,
 				7EA3835A22A8B7DC00C8CDD6 /* SignUpViewController.swift */,
 				7EA3834822A8AF4700C8CDD6 /* DriverViewController.swift */,
@@ -82,6 +91,9 @@
 				7EA3834F22A8AF4900C8CDD6 /* Assets.xcassets */,
 				7EA3835122A8AF4900C8CDD6 /* LaunchScreen.storyboard */,
 				7EA3835422A8AF4900C8CDD6 /* Info.plist */,
+				7EA3835E22A8DEA100C8CDD6 /* MapTasks.swift */,
+				7EA3836022A8E7FE00C8CDD6 /* EditInfoViewController.swift */,
+				7EA3836422A8F0C600C8CDD6 /* RideRequestViewController.swift */,
 			);
 			path = PoolParty;
 			sourceTree = "<group>";
@@ -106,6 +118,7 @@
 				7EA3834022A8AF4700C8CDD6 /* Frameworks */,
 				7EA3834122A8AF4700C8CDD6 /* Resources */,
 				F47E9490145B7F8226490E11 /* [CP] Copy Pods Resources */,
+				F33380397D0F512BC2F28B34 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EA3835322A8AF4900C8CDD6 /* LaunchScreen.storyboard in Resources */,
+				7EA3836322A8EC2E00C8CDD6 /* GoogleService-Info.plist in Resources */,
 				7EA3835022A8AF4900C8CDD6 /* Assets.xcassets in Resources */,
 				7EA3834E22A8AF4700C8CDD6 /* Main.storyboard in Resources */,
 			);
@@ -183,6 +197,44 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F33380397D0F512BC2F28B34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PoolParty/Pods-PoolParty-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoolParty/Pods-PoolParty-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F47E9490145B7F8226490E11 /* [CP] Copy Pods Resources */ = {
@@ -217,8 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EA3834B22A8AF4700C8CDD6 /* RiderViewController.swift in Sources */,
+				7EA3836522A8F0C600C8CDD6 /* RideRequestViewController.swift in Sources */,
+				7EA3835F22A8DEA100C8CDD6 /* MapTasks.swift in Sources */,
 				7EA3834722A8AF4700C8CDD6 /* AppDelegate.swift in Sources */,
 				7EA3835B22A8B7DC00C8CDD6 /* SignUpViewController.swift in Sources */,
+				7EA3836122A8E7FE00C8CDD6 /* EditInfoViewController.swift in Sources */,
 				7EA3834922A8AF4700C8CDD6 /* DriverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +430,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.allenapplicationdesign.PoolParty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -394,7 +449,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.allenapplicationdesign.PoolParty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

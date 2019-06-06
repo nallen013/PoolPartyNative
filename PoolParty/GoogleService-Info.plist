@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>964598333927-0ker6ml2a1jrr2dckaggko2kv9frd8h3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.964598333927-0ker6ml2a1jrr2dckaggko2kv9frd8h3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC4eJJCx86biVvOOi8uutrpVbin-o_3YEU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>964598333927</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.allenapplicationdesign.PoolParty</string>
+	<key>PROJECT_ID</key>
+	<string>poolparty-9f325</string>
+	<key>STORAGE_BUCKET</key>
+	<string>poolparty-9f325.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:964598333927:ios:e250ff9f9f2b004d</string>
+	<key>DATABASE_URL</key>
+	<string>https://poolparty-9f325.firebaseio.com</string>
+</dict>
+</plist>

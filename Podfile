@@ -9,4 +9,9 @@ target 'PoolParty' do
   # Pods for PoolParty
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'Alamofire', '~> 4.2.0'
+  pod 'SwiftyJSON'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
 end
