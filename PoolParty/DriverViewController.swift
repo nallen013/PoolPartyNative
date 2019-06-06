@@ -16,16 +16,21 @@ class DriverViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
     
     let locationManager = CLLocationManager()
     
+    var currentLocation = CLLocationCoordinate2D()
+    var destLat = 0.0
+    var destLon = 0.0
+    
     let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: GMSCameraPosition.camera(withLatitude: 0, longitude: 0, zoom: 6.0))
     
-    override func loadView() {
-        super.loadView()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         view = mapView
         
-        let origin = "\(32.776665),\(-96.796989)"
-        let destination = "\(39.180430),\(-96.557290)"
+        let origin = "\(37.5357629),\(-77.4355607)"
+        let destination = "\(37.6279917),\(-77.6725502)"
         
+        //Draw route
         let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=AIzaSyAw8wS-jnHVHIWj30YDpN6nlZCgt1-Sgp8"
         
         //Rrequesting Alamofire and SwiftyJSON
@@ -53,6 +58,37 @@ class DriverViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
                 return
             }
         }
+        
+        let marker1 = GMSMarker();
+        marker1.position = CLLocationCoordinate2D(latitude: 37.619539, longitude: -77.57414919)
+        marker1.title = "Destination: West Creek Town Center"
+        marker1.snippet = "(717) 836-8628"
+        marker1.icon = UIImage(named: "personpin")
+        marker1.map = mapView
+        
+        let marker2 = GMSMarker();
+        marker2.position = CLLocationCoordinate2D(latitude: 37.6431611, longitude: -77.5427165)
+        marker2.title = "Destination: West Creek 3"
+        marker2.snippet = "(937) 325-7268"
+        marker2.icon = UIImage(named: "personpin")
+        marker2.map = mapView
+        
+        let marker3 = GMSMarker();
+        marker3.position = CLLocationCoordinate2D(latitude: 37.6119661, longitude: -77.5293403)
+        marker3.title = "Destination: Billy Jack's Shack, Cary St"
+        marker3.snippet = "(717) 836-8628"
+        marker3.icon = UIImage(named: "personpin")
+        marker3.map = mapView
+        
+        let startMarker = GMSMarker();
+        startMarker.position = CLLocationCoordinate2D(latitude: 37.5357629, longitude: -77.4355607)
+        startMarker.icon = GMSMarker.markerImage(with: UIColor.blue)
+        startMarker.map = mapView
+        
+        let endMarker = GMSMarker();
+        endMarker.position = CLLocationCoordinate2D(latitude: 37.6279917, longitude: -77.6725502)
+        endMarker.icon = GMSMarker.markerImage(with: UIColor.green)
+        endMarker.map = mapView
     }
     
     override func viewDidLoad() {
@@ -77,6 +113,7 @@ class DriverViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         }
         
         mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+        self.currentLocation = location.coordinate
         locationManager.stopUpdatingLocation()
     }
     
@@ -89,66 +126,6 @@ class DriverViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
-    }
-    
-    func getNearbyUsers(src: String, dest: String) -> [[String]] {
-        let db = Firestore.firestore()
-        let dur = calculateRouteDuration(src: src,dest: dest,waypts: "")
-        var arr = [[String]]()
-        
-        let waypts = "";
-        db.collection("Users").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print ("Error")
-            } else {
-                for document in querySnapshot!.documents {
-                    waypts += document.data()["source"] + "|" + document.data()["destination"]
-                    
-                    let new_dur = self.calculateRouteDuration(src: src, dest: dest, waypts: waypts)
-                    
-                    if new_dur - dur <= 300 {
-                        arr[0][0] = src
-                        arr[0][1] = dest
-                    }
-                    
-                    
-                }
-            }
-        }
-        
-        return arr
-        
-    }
-    
-    func calculateRouteDuration(src: String, dest: String, waypts: String) -> Int {
-        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(src)&destination=\(dest)&mode=driving&key=ADD_KEY_HERE&waypoints=\(waypts)"
-        
-        //Rrequesting Alamofire and SwiftyJSON
-        Alamofire.request(url).responseJSON { response in
-            print(response.request as Any)  // original URL request
-            print(response.response as Any) // HTTP URL response
-            print(response.data as Any)     // server data
-            print(response.result)   // result of response serialization
-            
-            do {
-            let json = try JSON(data: response.data!)
-            let routes = json["routes"].arrayValue
-            
-            var legs = routes[0]["legs"]
-            
-            let routeDur = 0
-            for leg in legs
-            {
-                let routeDuration = legs["duration"].dictionary
-                let duration_value = routeDuration?[value]
-                
-                routeDur += duration_value
-            }
-                return routeDur }
-            catch let error as NSError {
-                return
-            }
-        }
     }
 }
 

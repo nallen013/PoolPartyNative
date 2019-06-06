@@ -22,5 +22,6 @@ class SignUpViewController : UIViewController {
         UserDefaults.standard.set(NameTextField.text, forKey: "name")
         UserDefaults.standard.set(EmailTextField.text, forKey: "email")
         UserDefaults.standard.set(PhoneTextField.text, forKey: "phone")
+        UserDefaults.standard.set("15075 Capital One Dr., Richmond, VA 23238", forKey: "dest")
     }
 }

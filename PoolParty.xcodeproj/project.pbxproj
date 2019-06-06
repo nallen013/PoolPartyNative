@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49301C9A9BBB8ED8410DA388 /* Pods_PoolParty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656CC5D05FD094E2AFF931E0 /* Pods_PoolParty.framework */; };
+		7E668A7222A9593E0022A46E /* RideViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E668A7122A9593E0022A46E /* RideViewViewController.swift */; };
 		7EA3834722A8AF4700C8CDD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA3834622A8AF4700C8CDD6 /* AppDelegate.swift */; };
 		7EA3834922A8AF4700C8CDD6 /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA3834822A8AF4700C8CDD6 /* DriverViewController.swift */; };
 		7EA3834B22A8AF4700C8CDD6 /* RiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA3834A22A8AF4700C8CDD6 /* RiderViewController.swift */; };
@@ -19,11 +20,13 @@
 		7EA3836122A8E7FE00C8CDD6 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA3836022A8E7FE00C8CDD6 /* EditInfoViewController.swift */; };
 		7EA3836322A8EC2E00C8CDD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EA3836222A8EC2E00C8CDD6 /* GoogleService-Info.plist */; };
 		7EA3836522A8F0C600C8CDD6 /* RideRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA3836422A8F0C600C8CDD6 /* RideRequestViewController.swift */; };
+		7EA3836722A9481600C8CDD6 /* ChangeDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA3836622A9481600C8CDD6 /* ChangeDestinationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		21822D96504FD8B3A5AAD03F /* Pods-PoolParty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoolParty.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoolParty/Pods-PoolParty.release.xcconfig"; sourceTree = "<group>"; };
 		656CC5D05FD094E2AFF931E0 /* Pods_PoolParty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoolParty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E668A7122A9593E0022A46E /* RideViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewViewController.swift; sourceTree = "<group>"; };
 		7EA3834322A8AF4700C8CDD6 /* PoolParty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoolParty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA3834622A8AF4700C8CDD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EA3834822A8AF4700C8CDD6 /* DriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 		7EA3836022A8E7FE00C8CDD6 /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
 		7EA3836222A8EC2E00C8CDD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7EA3836422A8F0C600C8CDD6 /* RideRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestViewController.swift; sourceTree = "<group>"; };
+		7EA3836622A9481600C8CDD6 /* ChangeDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDestinationViewController.swift; sourceTree = "<group>"; };
 		CA1B026CB2F6F79EE302F274 /* Pods-PoolParty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoolParty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoolParty/Pods-PoolParty.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +98,8 @@
 				7EA3835E22A8DEA100C8CDD6 /* MapTasks.swift */,
 				7EA3836022A8E7FE00C8CDD6 /* EditInfoViewController.swift */,
 				7EA3836422A8F0C600C8CDD6 /* RideRequestViewController.swift */,
+				7EA3836622A9481600C8CDD6 /* ChangeDestinationViewController.swift */,
+				7E668A7122A9593E0022A46E /* RideViewViewController.swift */,
 			);
 			path = PoolParty;
 			sourceTree = "<group>";
@@ -275,6 +281,8 @@
 				7EA3835B22A8B7DC00C8CDD6 /* SignUpViewController.swift in Sources */,
 				7EA3836122A8E7FE00C8CDD6 /* EditInfoViewController.swift in Sources */,
 				7EA3834922A8AF4700C8CDD6 /* DriverViewController.swift in Sources */,
+				7EA3836722A9481600C8CDD6 /* ChangeDestinationViewController.swift in Sources */,
+				7E668A7222A9593E0022A46E /* RideViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

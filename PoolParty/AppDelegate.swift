@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyAw8wS-jnHVHIWj30YDpN6nlZCgt1-Sgp8")
         GMSPlacesClient.provideAPIKey("AIzaSyAw8wS-jnHVHIWj30YDpN6nlZCgt1-Sgp8")
         FirebaseApp.configure()
+        sleep(2)
         return true
     }
 
