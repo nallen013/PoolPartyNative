@@ -10,7 +10,17 @@ import Foundation
 import UIKit
 
 class SignUpViewController : UIViewController {
+    @IBOutlet weak var NameTextField: UITextField!
+    @IBOutlet weak var EmailTextField: UITextField!
+    @IBOutlet weak var PhoneTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func GetStartedClicked(_ sender: Any) {
+        UserDefaults.standard.set(NameTextField.text, forKey: "name")
+        UserDefaults.standard.set(EmailTextField.text, forKey: "email")
+        UserDefaults.standard.set(PhoneTextField.text, forKey: "phone")
     }
 }

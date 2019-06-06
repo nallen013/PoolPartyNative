@@ -9,12 +9,16 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var EmailLabel: UILabel!
+    @IBOutlet weak var PhoneLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        NameLabel.text = UserDefaults.standard.string(forKey: "name")
+        EmailLabel.text = UserDefaults.standard.string(forKey: "email")
+        PhoneLabel.text = UserDefaults.standard.string(forKey: "phone")
     }
-
-
 }
 
