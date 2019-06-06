@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  PoolParty
 //
 //  Created by Nicholas Allen on 6/5/19.
@@ -8,10 +8,13 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
-    
+class RiderViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
     }
+
+
 }
 
