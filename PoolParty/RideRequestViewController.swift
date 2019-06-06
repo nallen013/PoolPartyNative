@@ -67,4 +67,9 @@ class RideRequestViewController: UIViewController {
         self.submitForm()
         dismiss(animated: true, completion: nil)
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

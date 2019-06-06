@@ -10,6 +10,7 @@ import UIKit
 import GoogleMaps
 import Alamofire
 import SwiftyJSON
+import Firebase
 
 class DriverViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
@@ -88,6 +89,66 @@ class DriverViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
+    }
+    
+    func getNearbyUsers(src: String, dest: String) -> [[String]] {
+        let db = Firestore.firestore()
+        let dur = calculateRouteDuration(src: src,dest: dest,waypts: "")
+        var arr = [[String]]()
+        
+        let waypts = "";
+        db.collection("Users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print ("Error")
+            } else {
+                for document in querySnapshot!.documents {
+                    waypts += document.data()["source"] + "|" + document.data()["destination"]
+                    
+                    let new_dur = self.calculateRouteDuration(src: src, dest: dest, waypts: waypts)
+                    
+                    if new_dur - dur <= 300 {
+                        arr[0][0] = src
+                        arr[0][1] = dest
+                    }
+                    
+                    
+                }
+            }
+        }
+        
+        return arr
+        
+    }
+    
+    func calculateRouteDuration(src: String, dest: String, waypts: String) -> Int {
+        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(src)&destination=\(dest)&mode=driving&key=ADD_KEY_HERE&waypoints=\(waypts)"
+        
+        //Rrequesting Alamofire and SwiftyJSON
+        Alamofire.request(url).responseJSON { response in
+            print(response.request as Any)  // original URL request
+            print(response.response as Any) // HTTP URL response
+            print(response.data as Any)     // server data
+            print(response.result)   // result of response serialization
+            
+            do {
+            let json = try JSON(data: response.data!)
+            let routes = json["routes"].arrayValue
+            
+            var legs = routes[0]["legs"]
+            
+            let routeDur = 0
+            for leg in legs
+            {
+                let routeDuration = legs["duration"].dictionary
+                let duration_value = routeDuration?[value]
+                
+                routeDur += duration_value
+            }
+                return routeDur }
+            catch let error as NSError {
+                return
+            }
+        }
     }
 }
 

@@ -241,7 +241,7 @@
             </objects>
             <point key="canvasLocation" x="1582.608695652174" y="337.5"/>
         </scene>
-        <!--Ride Request View Controller-->
+        <!--Request a Ride-->
         <scene sceneID="8Ke-De-6AE">
             <objects>
                 <viewController id="Fu0-52-4Ca" customClass="RideRequestViewController" customModule="PoolParty" customModuleProvider="target" sceneMemberID="viewController">
@@ -249,60 +249,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pickup Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eaf-wT-YQn">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pickup Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eaf-wT-YQn">
                                 <rect key="frame" x="20" y="210" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z0A-am-XfG">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z0A-am-XfG">
                                 <rect key="frame" x="20" y="248" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: [nil]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go8-Ih-zFq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: [nil]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go8-Ih-zFq">
                                 <rect key="frame" x="20" y="123" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email: [nil]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ruc-rQ-na7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: [nil]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ruc-rQ-na7">
                                 <rect key="frame" x="20" y="152" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone: [nil]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3y-xE-Ce6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone: [nil]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3y-xE-Ce6">
                                 <rect key="frame" x="20" y="181" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desired Arrival Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99R-Ik-cAT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desired Arrival Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99R-Ik-cAT">
                                 <rect key="frame" x="20" y="311" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="nMx-yv-1Kh">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="nMx-yv-1Kh">
                                 <rect key="frame" x="0.0" y="340" width="414" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="581496596.90388894">
                                     <!--2019-06-06 06:49:56 +0000-->
                                 </date>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d3y-xE-Ce6" firstAttribute="leading" secondItem="ZoC-Zn-tIC" secondAttribute="leading" constant="20" id="5Th-eM-fJD"/>
+                            <constraint firstItem="ZoC-Zn-tIC" firstAttribute="trailing" secondItem="go8-Ih-zFq" secondAttribute="trailing" constant="20" id="7Mm-GI-F1X"/>
+                            <constraint firstItem="nMx-yv-1Kh" firstAttribute="trailing" secondItem="ZoC-Zn-tIC" secondAttribute="trailing" id="7UT-Ej-b9J"/>
+                            <constraint firstItem="d3y-xE-Ce6" firstAttribute="top" secondItem="Ruc-rQ-na7" secondAttribute="bottom" constant="8" id="HXE-V3-njY"/>
+                            <constraint firstItem="ZoC-Zn-tIC" firstAttribute="trailing" secondItem="Eaf-wT-YQn" secondAttribute="trailing" constant="20" id="JDU-pr-qmA"/>
+                            <constraint firstItem="nMx-yv-1Kh" firstAttribute="leading" secondItem="ZoC-Zn-tIC" secondAttribute="leading" id="Jfg-lO-aQ6"/>
+                            <constraint firstItem="ZoC-Zn-tIC" firstAttribute="trailing" secondItem="Ruc-rQ-na7" secondAttribute="trailing" constant="20" id="KdG-gX-7ox"/>
+                            <constraint firstItem="Ruc-rQ-na7" firstAttribute="top" secondItem="go8-Ih-zFq" secondAttribute="bottom" constant="8" id="Lfx-tf-PNl"/>
+                            <constraint firstItem="ZoC-Zn-tIC" firstAttribute="trailing" secondItem="d3y-xE-Ce6" secondAttribute="trailing" constant="20" id="PS7-fy-kx5"/>
+                            <constraint firstItem="Ruc-rQ-na7" firstAttribute="leading" secondItem="ZoC-Zn-tIC" secondAttribute="leading" constant="20" id="TkY-ql-Sdp"/>
+                            <constraint firstItem="99R-Ik-cAT" firstAttribute="leading" secondItem="ZoC-Zn-tIC" secondAttribute="leading" constant="20" id="WNq-Bj-U4C"/>
+                            <constraint firstItem="nMx-yv-1Kh" firstAttribute="centerY" secondItem="li7-9H-mVg" secondAttribute="centerY" id="Xl5-cf-EfN"/>
+                            <constraint firstItem="go8-Ih-zFq" firstAttribute="top" secondItem="ZoC-Zn-tIC" secondAttribute="top" constant="35" id="aA4-r3-o9g"/>
+                            <constraint firstItem="Eaf-wT-YQn" firstAttribute="top" secondItem="d3y-xE-Ce6" secondAttribute="bottom" constant="8" id="fFc-dC-6Qu"/>
+                            <constraint firstItem="Eaf-wT-YQn" firstAttribute="leading" secondItem="ZoC-Zn-tIC" secondAttribute="leading" constant="20" id="nvc-OF-0Zs"/>
+                            <constraint firstItem="ZoC-Zn-tIC" firstAttribute="trailing" secondItem="99R-Ik-cAT" secondAttribute="trailing" constant="20" id="osq-2v-3SI"/>
+                            <constraint firstItem="Z0A-am-XfG" firstAttribute="top" secondItem="Eaf-wT-YQn" secondAttribute="bottom" constant="8" id="pA9-Ok-9Oe"/>
+                            <constraint firstItem="nMx-yv-1Kh" firstAttribute="top" secondItem="99R-Ik-cAT" secondAttribute="bottom" constant="8" id="qFS-sD-aCQ"/>
+                            <constraint firstItem="Z0A-am-XfG" firstAttribute="leading" secondItem="ZoC-Zn-tIC" secondAttribute="leading" constant="20" id="tel-p2-16O"/>
+                            <constraint firstItem="ZoC-Zn-tIC" firstAttribute="trailing" secondItem="Z0A-am-XfG" secondAttribute="trailing" constant="20" id="tjk-Pd-CGk"/>
+                            <constraint firstItem="go8-Ih-zFq" firstAttribute="leading" secondItem="ZoC-Zn-tIC" secondAttribute="leading" constant="20" id="xgm-Yc-086"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZoC-Zn-tIC"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QbP-6P-Jf8">
+                    <navigationItem key="navigationItem" title="Request a Ride" id="QbP-6P-Jf8">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="DNa-SB-iXP">
                             <connections>
                                 <action selector="OnClickCancel:" destination="Fu0-52-4Ca" id="nM0-7R-hpO"/>
@@ -327,7 +343,7 @@
             </objects>
             <point key="canvasLocation" x="3876.811594202899" y="-320.08928571428572"/>
         </scene>
-        <!--Edit Info View Controller-->
+        <!--Edit Your Information-->
         <scene sceneID="ghb-kF-hFi">
             <objects>
                 <viewController id="1Dp-rQ-iUM" customClass="EditInfoViewController" customModule="PoolParty" customModuleProvider="target" sceneMemberID="viewController">
@@ -370,7 +386,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u86-1N-71d"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XxD-tn-FZA">
+                    <navigationItem key="navigationItem" title="Edit Your Information" id="XxD-tn-FZA">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="1Ei-0b-Oor">
                             <connections>
                                 <action selector="CancelOnClick:" destination="1Dp-rQ-iUM" id="iWD-g3-Bc2"/>
