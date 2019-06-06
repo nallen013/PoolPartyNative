@@ -13,6 +13,7 @@
 		7EA3834E22A8AF4700C8CDD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA3834C22A8AF4700C8CDD6 /* Main.storyboard */; };
 		7EA3835022A8AF4900C8CDD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA3834F22A8AF4900C8CDD6 /* Assets.xcassets */; };
 		7EA3835322A8AF4900C8CDD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA3835122A8AF4900C8CDD6 /* LaunchScreen.storyboard */; };
+		7EA3835B22A8B7DC00C8CDD6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA3835A22A8B7DC00C8CDD6 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7EA3834F22A8AF4900C8CDD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EA3835222A8AF4900C8CDD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EA3835422A8AF4900C8CDD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EA3835A22A8B7DC00C8CDD6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				7EA3834622A8AF4700C8CDD6 /* AppDelegate.swift */,
+				7EA3835A22A8B7DC00C8CDD6 /* SignUpViewController.swift */,
 				7EA3834822A8AF4700C8CDD6 /* FirstViewController.swift */,
 				7EA3834A22A8AF4700C8CDD6 /* SecondViewController.swift */,
 				7EA3834C22A8AF4700C8CDD6 /* Main.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				7EA3834B22A8AF4700C8CDD6 /* SecondViewController.swift in Sources */,
 				7EA3834722A8AF4700C8CDD6 /* AppDelegate.swift in Sources */,
+				7EA3835B22A8B7DC00C8CDD6 /* SignUpViewController.swift in Sources */,
 				7EA3834922A8AF4700C8CDD6 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
